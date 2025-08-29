@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>You Are Awesome!</title>
+  <link rel="icon" type="image/gif" href="./images/computer-cat.gif">
   <style>
     body {
       font-family: 'Comic Sans MS', cursive, sans-serif;
@@ -28,19 +29,30 @@
       font-size: 1.5em;
       color: #555;
     }
+    img {
+      max-width: 300px;
+    }
+
+   
   </style>
 </head>
 <body>
-  <h1>Hey! You're Purr-fect 😺💖</h1>
+  <h1>Hey *Twin! You're Awesome Sauce💖</h1>
   <p>Whatever happened yesterday... just know you’re stronger, cooler, and funnier than it.</p>
 
   <div class="cat">
-    <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" alt="Dancing Cat">
+    <img id="funnyImage" src="" alt="Funny Image">
   </div>
 
   <div class="joke" id="joke">
     <!-- Joke will be inserted here -->
   </div>
+
+  <footer style="margin-top: 60px; font-size: 1.2em; color: #888;">
+  Assembled by a sleep-deprived raccoon (Krishi) 🦝 with Wi-Fi and questionable life choices
+
+  <p>*Twin: Together We Ignore Negativity</p>
+  </footer>
 
   <script>
     const jokes = [
@@ -52,8 +64,21 @@
       "Why did the cat sit on the computer? It wanted to keep an eye on the mouse!"
     ];
 
+    const images = [
+      "./images/exploding_cat1.gif",
+      "./images/exploding_cat2.gif",
+      "./images/exploding_cat3.gif",
+      "./images/exploding_cat4.gif",
+      "./images/exploding_cat5.gif"
+    ];
+
+    // Pick random joke
     const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
     document.getElementById('joke').textContent = randomJoke;
+
+    // Pick random image
+    const randomImage = images[Math.floor(Math.random() * images.length)];
+    document.getElementById('funnyImage').src = randomImage;
   </script>
 </body>
 </html>
