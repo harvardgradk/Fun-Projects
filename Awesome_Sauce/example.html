@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>You Are Awesome!</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #fff0f5;
+      color: #333;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      font-size: 3em;
+      color: #ff69b4;
+      animation: bounce 1s infinite alternate;
+    }
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-20px); }
+    }
+    .cat {
+      margin-top: 30px;
+    }
+    .joke {
+      margin-top: 40px;
+      font-size: 1.5em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hey! You're Purr-fect 😺💖</h1>
+  <p>Whatever happened yesterday... just know you’re stronger, cooler, and funnier than it.</p>
+
+  <div class="cat">
+    <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" alt="Dancing Cat">
+  </div>
+
+  <div class="joke" id="joke">
+    <!-- Joke will be inserted here -->
+  </div>
+
+  <script>
+    const jokes = [
+      "Why don’t skeletons fight each other? They don’t have the guts!",
+      "I'm reading a book about anti-gravity. It's impossible to put down!",
+      "Why did the scarecrow win an award? Because he was outstanding in his field!",
+      "Parallel lines have so much in common… it’s a shame they’ll never meet.",
+      "What do you call fake spaghetti? An impasta!",
+      "Why did the cat sit on the computer? It wanted to keep an eye on the mouse!"
+    ];
+
+    const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
+    document.getElementById('joke').textContent = randomJoke;
+  </script>
+</body>
+</html>
